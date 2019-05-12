@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon
+  id="plugin.video.appxp"
+  version="1.0"
+  name="appxp"
+  provider-name="hieuhien.vn">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.kodiswift" version="0.0.7" />
+    <import addon="script.module.kodi4vn" version="0.0.7" />
+    <import addon="plugin.video.youtube" version="4.4.1" />
+    <import addon="script.module.httplib2" version="0.1" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Hieuhien.vn Media Center</summary>
+    <description>Trung Tam Giai Tri tong hop cac nguon chia se tren mang Internet - Nguoi xem tu chiu trach nhiem ve noi dung va do on dinh</description>
+    <platform>all</platform>
+  </extension>
+</addon>
