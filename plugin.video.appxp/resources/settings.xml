@@ -6,7 +6,7 @@
 		<setting id="hash" type="text" visible="False"/>
 	</category>
 	<category label="Misc">
-	<setting id="GSheetURL" type="text" label="Google Spreadsheet URL" default="https://goo.gl/IkLPKV"/>
+	<setting id="GSheetURL" type="text" label="Google Spreadsheet URL" default="https://docs.google.com/spreadsheets/d/1RelNlIujogGH3ORvlJ_CESRKx9nhp3TSl9GbAVwi1EU/edit?usp=sharing"/>
 	<setting id="thumbview" type="bool" label="Auto use thumbnail view (for future use)" default="false"/>
 	</category>
 </settings>

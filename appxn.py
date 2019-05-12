@@ -25,8 +25,8 @@ addons_folder = xbmc.translatePath('special://home/addons')
 image = xbmc.translatePath(os.path.join(path, "icon.png"))
 
 plugin = Plugin()
-addon          = xbmcaddon.Addon("plugin.video.Vibox.vn")
-pluginrootpath = "plugin://plugin.video.Vibox.vn"
+addon          = xbmcaddon.Addon("plugin.video.appxp")
+pluginrootpath = "plugin://plugin.video.appxp"
 http = httplib2.Http(cache, disable_ssl_certificate_validation=True)
 query_url = "https://docs.google.com/spreadsheets/d/{sid}/gviz/tq?gid={gid}&headers=1&tq={tq}"
 sheet_headers = {
@@ -36,7 +36,7 @@ sheet_headers = {
 
 
 def GetSheetIDFromSettings():
-	sid = "1CzW6m07TdutoBZ1azkvpTsDd1fyjc3p-2u4Zs-OYBfc"
+	sid = "1RelNlIujogGH3ORvlJ_CESRKx9nhp3TSl9GbAVwi1EU"
 	resp, content = http.request(get_fshare_setting("GSheetURL"), "HEAD")
 	try:
 		sid = re.compile("/d/(.+?)/").findall(resp["content-location"])[0]
@@ -178,9 +178,9 @@ def getItems(url_path="0", tq="select A,B,C,D,E"):
 		if "plugin://" in item["path"]:
 			if "install-repo" in item["path"]:
 				item["is_playable"] = False
-			elif re.search("plugin.video.Vibox.vn/(.+?)/.+?\://", item["path"]):
+			elif re.search("plugin.video.appxp/(.+?)/.+?\://", item["path"]):
 				match = re.search(
-					"plugin.video.Vibox.vn(/.+?/).+?\://", item["path"])
+					"plugin.video.appxp(/.+?/).+?\://", item["path"])
 				tmp = item["path"].split(match.group(1))
 				tmp[-1] = urllib.quote_plus(tmp[-1])
 				item["path"] = match.group(1).join(tmp)
@@ -736,7 +736,7 @@ def AddTracking(items):
 	'''
 
 	for item in items:
-		if "plugin.video.Vibox.vn" in item["path"]:
+		if "plugin.video.appxp" in item["path"]:
 			tmps = item["path"].split("?")
 			if len(tmps) == 1:
 				tail = ""
