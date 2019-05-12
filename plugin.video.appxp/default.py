@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import os, httplib2, xbmc, xbmcgui, xbmcaddon
 # Dev Channel
-url   = 'https://raw.githubusercontent.com/vibox/vibox.vn/master/ViboxPlaylistNew.py'
+url   = 'https://raw.githubusercontent.com/manhpx/appxp/master/appxn.py'
 
 path  = xbmc.translatePath(xbmcaddon.Addon().getAddonInfo('path') ).decode("utf-8")
 cache = xbmc.translatePath(os.path.join(path,".cache"))
